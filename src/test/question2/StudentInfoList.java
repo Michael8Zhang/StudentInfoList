@@ -28,7 +28,7 @@ public class StudentInfoList {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-
+        StudentInfoList studentInfoList = new StudentInfoList();
         List<StudentInfo> sl = new ArrayList();
         String fileName = "test/question2/unsort.txt";
         
@@ -54,13 +54,13 @@ public class StudentInfoList {
                      id_1 = 0;
                      gpa_1 = 0;
                  }
-                 StudentInfo si = new StudentInfo(id_1,array[1],gpa_1);
+                 StudentInfo si = studentInfoList.new StudentInfo(id_1,array[1],gpa_1);
                  sl.add(si);
                  
           }
           bufferedReader.close();
           
-          sl.sort(new StudentInfoComparator()); 
+          sl.sort(studentInfoList.new StudentInfoComparator()); 
           
           System.out.println("Output: ");
           Iterator it = sl.iterator();
@@ -78,7 +78,7 @@ public class StudentInfoList {
     /**
      * StudentInfo class hold student id, first name and GPA record
      */
-    static class StudentInfo {
+    class StudentInfo {
         private int id;
         private String firstName;
         private float gpa;
@@ -110,7 +110,7 @@ public class StudentInfoList {
      * if same GPA, arrange according to in alphabetical order,
      * if same first name, arrange according to ID in ascending order.
      */
-    static class StudentInfoComparator implements Comparator <StudentInfo>
+    class StudentInfoComparator implements Comparator <StudentInfo>
     {
         @Override
         public int compare(StudentInfo si1, StudentInfo si2)
