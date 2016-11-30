@@ -1,0 +1,9 @@
+ID Name GPA
+33 Tina 3.68
+85 Louis 3.85
+56 Samil 3.75
+19 Samar 3.75
+22   Lorry 3.76
+86 Louis a3.85
+18 Sam 3.75
+29 Tina 3.88
